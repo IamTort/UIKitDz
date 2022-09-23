@@ -13,6 +13,7 @@
 		FABADE1728DDCD04008F8E5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABADE1528DDCD04008F8E5E /* Main.storyboard */; };
 		FABADE1928DDCD05008F8E5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABADE1828DDCD05008F8E5E /* Assets.xcassets */; };
 		FABADE1C28DDCD05008F8E5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABADE1A28DDCD05008F8E5E /* LaunchScreen.storyboard */; };
+		FABADE2428DDD5D7008F8E5E /* ViewControllerNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABADE2328DDD5D7008F8E5E /* ViewControllerNew.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FABADE1828DDCD05008F8E5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FABADE1B28DDCD05008F8E5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FABADE1D28DDCD05008F8E5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FABADE2328DDD5D7008F8E5E /* ViewControllerNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				FABADE1828DDCD05008F8E5E /* Assets.xcassets */,
 				FABADE1A28DDCD05008F8E5E /* LaunchScreen.storyboard */,
 				FABADE1D28DDCD05008F8E5E /* Info.plist */,
+				FABADE2328DDD5D7008F8E5E /* ViewControllerNew.swift */,
 			);
 			path = UIKitDz;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				FABADE1428DDCD04008F8E5E /* ViewController.swift in Sources */,
 				FABADE1028DDCD04008F8E5E /* AppDelegate.swift in Sources */,
 				FABADE1228DDCD04008F8E5E /* SceneDelegate.swift in Sources */,
+				FABADE2428DDD5D7008F8E5E /* ViewControllerNew.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +308,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -332,7 +336,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
