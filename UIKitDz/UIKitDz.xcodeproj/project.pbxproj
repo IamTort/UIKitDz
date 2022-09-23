@@ -74,6 +74,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FABADE2028DDCD05008F8E5E /* Build configuration list for PBXNativeTarget "UIKitDz" */;
 			buildPhases = (
+				FABADE2528DDECB6008F8E5E /* Run SwiftLint */,
 				FABADE0828DDCD04008F8E5E /* Sources */,
 				FABADE0928DDCD04008F8E5E /* Frameworks */,
 				FABADE0A28DDCD04008F8E5E /* Resources */,
@@ -132,6 +133,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FABADE2528DDECB6008F8E5E /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FABADE0828DDCD04008F8E5E /* Sources */ = {
