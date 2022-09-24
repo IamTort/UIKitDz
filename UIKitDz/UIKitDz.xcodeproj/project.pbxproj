@@ -13,6 +13,8 @@
 		FABADE1728DDCD04008F8E5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABADE1528DDCD04008F8E5E /* Main.storyboard */; };
 		FABADE1928DDCD05008F8E5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABADE1828DDCD05008F8E5E /* Assets.xcassets */; };
 		FABADE1C28DDCD05008F8E5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABADE1A28DDCD05008F8E5E /* LaunchScreen.storyboard */; };
+		FABADE2728DE50C2008F8E5E /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABADE2628DE50C2008F8E5E /* RegistrationViewController.swift */; };
+		FABADE2928DE5B9A008F8E5E /* CheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABADE2828DE5B99008F8E5E /* CheckViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		FABADE1828DDCD05008F8E5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FABADE1B28DDCD05008F8E5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FABADE1D28DDCD05008F8E5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FABADE2628DE50C2008F8E5E /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		FABADE2828DE5B99008F8E5E /* CheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				FABADE1828DDCD05008F8E5E /* Assets.xcassets */,
 				FABADE1A28DDCD05008F8E5E /* LaunchScreen.storyboard */,
 				FABADE1D28DDCD05008F8E5E /* Info.plist */,
+				FABADE2628DE50C2008F8E5E /* RegistrationViewController.swift */,
+				FABADE2828DE5B99008F8E5E /* CheckViewController.swift */,
 			);
 			path = UIKitDz;
 			sourceTree = "<group>";
@@ -162,6 +168,8 @@
 			files = (
 				FABADE1428DDCD04008F8E5E /* ViewController.swift in Sources */,
 				FABADE1028DDCD04008F8E5E /* AppDelegate.swift in Sources */,
+				FABADE2728DE50C2008F8E5E /* RegistrationViewController.swift in Sources */,
+				FABADE2928DE5B9A008F8E5E /* CheckViewController.swift in Sources */,
 				FABADE1228DDCD04008F8E5E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
