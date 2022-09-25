@@ -13,6 +13,10 @@
 		FABADE1728DDCD04008F8E5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABADE1528DDCD04008F8E5E /* Main.storyboard */; };
 		FABADE1928DDCD05008F8E5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABADE1828DDCD05008F8E5E /* Assets.xcassets */; };
 		FABADE1C28DDCD05008F8E5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABADE1A28DDCD05008F8E5E /* LaunchScreen.storyboard */; };
+		FABADE2B28DF7044008F8E5E /* dymd_nothing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FABADE2A28DF7044008F8E5E /* dymd_nothing.mp3 */; };
+		FABADE2D28DF75A0008F8E5E /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABADE2C28DF75A0008F8E5E /* PlayerViewController.swift */; };
+		FABADE2F28DF9A28008F8E5E /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABADE2E28DF9A28008F8E5E /* Song.swift */; };
+		FABADE3128E05A76008F8E5E /* monetochka-gori.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FABADE3028E05A76008F8E5E /* monetochka-gori.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		FABADE1828DDCD05008F8E5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FABADE1B28DDCD05008F8E5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FABADE1D28DDCD05008F8E5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FABADE2A28DF7044008F8E5E /* dymd_nothing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dymd_nothing.mp3; sourceTree = "<group>"; };
+		FABADE2C28DF75A0008F8E5E /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		FABADE2E28DF9A28008F8E5E /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		FABADE3028E05A76008F8E5E /* monetochka-gori.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "monetochka-gori.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,10 @@
 				FABADE1828DDCD05008F8E5E /* Assets.xcassets */,
 				FABADE1A28DDCD05008F8E5E /* LaunchScreen.storyboard */,
 				FABADE1D28DDCD05008F8E5E /* Info.plist */,
+				FABADE2A28DF7044008F8E5E /* dymd_nothing.mp3 */,
+				FABADE2C28DF75A0008F8E5E /* PlayerViewController.swift */,
+				FABADE2E28DF9A28008F8E5E /* Song.swift */,
+				FABADE3028E05A76008F8E5E /* monetochka-gori.mp3 */,
 			);
 			path = UIKitDz;
 			sourceTree = "<group>";
@@ -126,8 +138,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABADE2B28DF7044008F8E5E /* dymd_nothing.mp3 in Resources */,
 				FABADE1C28DDCD05008F8E5E /* LaunchScreen.storyboard in Resources */,
 				FABADE1928DDCD05008F8E5E /* Assets.xcassets in Resources */,
+				FABADE3128E05A76008F8E5E /* monetochka-gori.mp3 in Resources */,
 				FABADE1728DDCD04008F8E5E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,8 +175,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FABADE1428DDCD04008F8E5E /* ViewController.swift in Sources */,
+				FABADE2D28DF75A0008F8E5E /* PlayerViewController.swift in Sources */,
 				FABADE1028DDCD04008F8E5E /* AppDelegate.swift in Sources */,
 				FABADE1228DDCD04008F8E5E /* SceneDelegate.swift in Sources */,
+				FABADE2F28DF9A28008F8E5E /* Song.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
