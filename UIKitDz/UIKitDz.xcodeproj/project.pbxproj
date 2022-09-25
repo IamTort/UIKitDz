@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		FABADE1028DDCD04008F8E5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABADE0F28DDCD04008F8E5E /* AppDelegate.swift */; };
-		FABADE1228DDCD04008F8E5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABADE1128DDCD04008F8E5E /* SceneDelegate.swift */; };
 		FABADE1428DDCD04008F8E5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABADE1328DDCD04008F8E5E /* ViewController.swift */; };
 		FABADE1728DDCD04008F8E5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABADE1528DDCD04008F8E5E /* Main.storyboard */; };
 		FABADE1928DDCD05008F8E5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABADE1828DDCD05008F8E5E /* Assets.xcassets */; };
 		FABADE1C28DDCD05008F8E5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABADE1A28DDCD05008F8E5E /* LaunchScreen.storyboard */; };
+		FABADE3328E0B44E008F8E5E /* BirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABADE3228E0B44E008F8E5E /* BirthdayViewController.swift */; };
+		FABADE3528E0B58C008F8E5E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABADE3428E0B58C008F8E5E /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FABADE0C28DDCD04008F8E5E /* UIKitDz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitDz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABADE0F28DDCD04008F8E5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FABADE1128DDCD04008F8E5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FABADE1328DDCD04008F8E5E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FABADE1628DDCD04008F8E5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FABADE1828DDCD05008F8E5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FABADE1B28DDCD05008F8E5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FABADE1D28DDCD05008F8E5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FABADE3228E0B44E008F8E5E /* BirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewController.swift; sourceTree = "<group>"; };
+		FABADE3428E0B58C008F8E5E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				FABADE0F28DDCD04008F8E5E /* AppDelegate.swift */,
-				FABADE1128DDCD04008F8E5E /* SceneDelegate.swift */,
 				FABADE1328DDCD04008F8E5E /* ViewController.swift */,
 				FABADE1528DDCD04008F8E5E /* Main.storyboard */,
 				FABADE1828DDCD05008F8E5E /* Assets.xcassets */,
 				FABADE1A28DDCD05008F8E5E /* LaunchScreen.storyboard */,
 				FABADE1D28DDCD05008F8E5E /* Info.plist */,
+				FABADE3228E0B44E008F8E5E /* BirthdayViewController.swift */,
+				FABADE3428E0B58C008F8E5E /* ProfileViewController.swift */,
 			);
 			path = UIKitDz;
 			sourceTree = "<group>";
@@ -161,8 +164,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FABADE1428DDCD04008F8E5E /* ViewController.swift in Sources */,
+				FABADE3328E0B44E008F8E5E /* BirthdayViewController.swift in Sources */,
+				FABADE3528E0B58C008F8E5E /* ProfileViewController.swift in Sources */,
 				FABADE1028DDCD04008F8E5E /* AppDelegate.swift in Sources */,
-				FABADE1228DDCD04008F8E5E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
