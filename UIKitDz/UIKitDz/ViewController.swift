@@ -47,9 +47,10 @@ final class ViewController: UIViewController {
         let button = UIButton(type: .custom)
         button.backgroundColor = .gray
         button.layer.cornerRadius = 15
-        button.setTitle("Игра \"Угадай число\"", for: .normal)
+        button.setTitle("Игра \"Угадай\n число\"", for: .normal)
+        button.titleLabel?.numberOfLines = 0
         button.titleLabel?.textAlignment = .center
-        button.frame = CGRect(x: 20, y: 240, width: 140, height: 70)
+        button.frame = CGRect(x: 20, y: 240, width: 140, height: 80)
         button.addTarget(self, action: #selector(findNumber(paramTarget:)), for: .touchUpInside)
         return button
     }()
