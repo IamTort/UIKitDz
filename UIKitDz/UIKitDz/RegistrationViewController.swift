@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+/// Контроллер регистрации гостей
 final class RegistrationViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -23,6 +23,6 @@ final class RegistrationViewController: UIViewController {
         let cancelAlertAction = UIAlertAction(title: "Cancel", style: .default)
         alertController.addAction(cancelAlertAction)
         alertController.addAction(okAlertAction)
-        self.present(alertController, animated: true)
+        present(alertController, animated: true)
     }
 }

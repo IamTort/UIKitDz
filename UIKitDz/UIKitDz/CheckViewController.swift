@@ -6,8 +6,8 @@
 //
 
 import UIKit
-
-class CheckViewController: UIViewController {
+/// Контроллер, который выставляет счет
+final class CheckViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
