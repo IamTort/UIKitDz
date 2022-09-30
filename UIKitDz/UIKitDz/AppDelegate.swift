@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions
                      launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow()
-        let loginVC = ViewController()
+        let loginVC = LoginViewController()
         window?.rootViewController = loginVC
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()

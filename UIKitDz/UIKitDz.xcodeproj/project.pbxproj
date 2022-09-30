@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FABADE1028DDCD04008F8E5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABADE0F28DDCD04008F8E5E /* AppDelegate.swift */; };
-		FABADE1428DDCD04008F8E5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABADE1328DDCD04008F8E5E /* ViewController.swift */; };
+		FABADE1428DDCD04008F8E5E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABADE1328DDCD04008F8E5E /* LoginViewController.swift */; };
 		FABADE1728DDCD04008F8E5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABADE1528DDCD04008F8E5E /* Main.storyboard */; };
 		FABADE1928DDCD05008F8E5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABADE1828DDCD05008F8E5E /* Assets.xcassets */; };
 		FABADE1C28DDCD05008F8E5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABADE1A28DDCD05008F8E5E /* LaunchScreen.storyboard */; };
@@ -23,7 +23,7 @@
 /* Begin PBXFileReference section */
 		FABADE0C28DDCD04008F8E5E /* UIKitDz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitDz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABADE0F28DDCD04008F8E5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FABADE1328DDCD04008F8E5E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FABADE1328DDCD04008F8E5E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FABADE1628DDCD04008F8E5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FABADE1828DDCD05008F8E5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FABADE1B28DDCD05008F8E5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				FABADE0F28DDCD04008F8E5E /* AppDelegate.swift */,
-				FABADE1328DDCD04008F8E5E /* ViewController.swift */,
+				FABADE1328DDCD04008F8E5E /* LoginViewController.swift */,
 				FABADE1528DDCD04008F8E5E /* Main.storyboard */,
 				FABADE1828DDCD05008F8E5E /* Assets.xcassets */,
 				FABADE1A28DDCD05008F8E5E /* LaunchScreen.storyboard */,
@@ -179,7 +179,7 @@
 				FABADE3F28E4E213008F8E5E /* PaymentViewController.swift in Sources */,
 				FABADE4128E61384008F8E5E /* PizzaIngredients.swift in Sources */,
 				FABADE3D28E4C1BC008F8E5E /* ChooseIngredientsViewController.swift in Sources */,
-				FABADE1428DDCD04008F8E5E /* ViewController.swift in Sources */,
+				FABADE1428DDCD04008F8E5E /* LoginViewController.swift in Sources */,
 				FABADE3928E48940008F8E5E /* FoodViewController.swift in Sources */,
 				FABADE4328E64D06008F8E5E /* InfoViewController.swift in Sources */,
 				FABADE1028DDCD04008F8E5E /* AppDelegate.swift in Sources */,

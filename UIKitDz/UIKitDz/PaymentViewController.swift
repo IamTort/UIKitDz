@@ -6,8 +6,10 @@
 //
 
 import UIKit
+
 /// Контроллер оплаты
 final class PaymentViewController: UIViewController {
+
 // MARK: - Private properties
     private lazy var orderLabel: UILabel = {
         let label = UILabel()
@@ -55,14 +57,16 @@ final class PaymentViewController: UIViewController {
     var orderIngredients: [String] = []
     var pizzaIngredients: PizzaIngredients?
     var pizzaName = ""
+
 // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupUI()
     }
-// MARK: - Public methods
-    func setupUI() {
+
+// MARK: - Private methods
+    private func setupUI() {
         navigationItem.title = "Оплата"
         pizzaLabel.text = "1 \(pizzaName)\n" + (pizzaIngredients?.getPizzaIngredients())!
         view.addSubview(orderLabel)
@@ -77,7 +81,7 @@ final class PaymentViewController: UIViewController {
         pizzaLabel.sizeToFit()
     }
 
-    func createLabel(title: String, coordinateY: Int) -> UILabel {
+    private func createLabel(title: String, coordinateY: Int) -> UILabel {
         let label = UILabel()
         label.text = title
         label.font = label.font.withSize(22)
@@ -85,20 +89,19 @@ final class PaymentViewController: UIViewController {
         return label
     }
 
-    func createSwitch(coordinateY: Int) -> UISwitch {
+    private func createSwitch(coordinateY: Int) -> UISwitch {
         let swich = UISwitch(frame: CGRect(x: Int(view.bounds.width) - 100, y: coordinateY, width: 40, height: 30))
-        swich.addTarget(self, action: #selector(changeSwitchValue(_:)), for: .touchUpInside)
+        swich.addTarget(self, action: #selector(changeSwitchValueAction(_:)), for: .touchUpInside)
         return swich
     }
 
-    @objc func changeSwitchValue(_ sender: UISwitch) {
-        if cashSwitch === sender {
+    // MARK: - Actions
+    @objc func changeSwitchValueAction(_ sender: UISwitch) {
+        guard cashSwitch === sender else { cashSwitch.isOn.toggle()
+                                            return }
             cardSwitch.isOn.toggle()
-        } else {
-            cashSwitch.isOn.toggle()
-        }
     }
-// MARK: - Actions
+
     @objc private func payAction(_ sender: UIButton) {
         let buttonAlertController = UIAlertController(title: "Заказ оплачен!",
                 message: "Ваш заказ доставят в течении 15 минут!\n Приятного аппетита", preferredStyle: .alert)

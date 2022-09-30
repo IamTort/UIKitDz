@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 /// Модель для хранения информации о выбранных ингридиентах пиццы
 struct PizzaIngredients {
     var mozzarella = false
@@ -13,7 +14,7 @@ struct PizzaIngredients {
     var mushrooms = false
     var olives = false
 
-// MARK: - Public methods
+// MARK: - Public method
     func getPizzaIngredients() -> String {
         var number = 2
         var ingredients = ""

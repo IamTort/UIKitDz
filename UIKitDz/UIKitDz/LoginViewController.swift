@@ -7,8 +7,9 @@
 
 import UIKit
 /// Контроллер для входа в систему
-final class ViewController: UIViewController {
-// MARK: - Private properties
+final class LoginViewController: UIViewController {
+
+    // MARK: - Private properties
     private lazy var loginImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(systemName: "cloud.fill"))
         imageView.frame = CGRect(x: UIScreen.main.bounds.width / 3, y: 140, width: 140, height: 80)
@@ -99,13 +100,15 @@ final class ViewController: UIViewController {
         button.addTarget(self, action: #selector(tappedAction(_:)), for: .touchUpInside)
         return button
     }()
-// MARK: - Lifecycle
+
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
-// MARK: - Public methods
-    func setupUI() {
+
+    // MARK: - Public methods
+    private func setupUI() {
         view.addSubview(loginImageView)
         view.addSubview(nameLabel)
         view.addSubview(emailLabel)
@@ -116,7 +119,8 @@ final class ViewController: UIViewController {
         view.addSubview(lineTwoView)
         view.addSubview(loginButton)
     }
-// MARK: - Actions
+
+    // MARK: - Actions
     @objc private func tappedAction(_ sender: UIButton) {
         let foodVC = FoodViewController()
         let navController = UINavigationController(rootViewController: foodVC)

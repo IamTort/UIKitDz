@@ -8,7 +8,8 @@
 import UIKit
 /// Контроллер выбора пиццы
 final class ChoosePizzaViewController: UIViewController {
-// MARK: - Private properties
+
+    // MARK: - Private properties
     private lazy var meetImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "pizza1"))
         imageView.frame = CGRect(x: 30, y: 150, width: 150, height: 150)
@@ -56,13 +57,15 @@ final class ChoosePizzaViewController: UIViewController {
         button.frame = CGRect(x: view.frame.width - 50, y: 380, width: 30, height: 30)
         return button
     }()
-// MARK: - Lifecycle
+
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
-// MARK: - Public methods
-    func setupUI() {
+
+    // MARK: - Public methods
+    private func setupUI() {
         navigationItem.title = "Pizza"
         navigationItem.leftBarButtonItem = UIBarButtonItem(image:
                 UIImage(systemName: "chevron.left"),
@@ -74,7 +77,8 @@ final class ChoosePizzaViewController: UIViewController {
         view.addSubview(addButton)
         view.addSubview(addTwoButton)
     }
-// MARK: - Actions
+
+    // MARK: - Actions
     @objc private func nextScreenAction(_ sender: UIButton) {
         let ingredientsVC = ChooseIngredientsViewController()
         ingredientsVC.modalPresentationStyle = .formSheet

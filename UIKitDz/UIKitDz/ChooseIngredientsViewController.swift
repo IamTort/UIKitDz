@@ -7,12 +7,15 @@
 
 import UIKit
 
+/// Протокол добавления метода делегата
 protocol DelegateViewController: AnyObject {
     func goToRootViewController()
 }
+
 /// Контроллер выбора ингредиентов
-final class ChooseIngredientsViewController: UIViewController, DelegateViewController {
-// MARK: - Private properties
+final class ChooseIngredientsViewController: UIViewController {
+
+    // MARK: - Private properties
     private lazy var pizzaLabel: UILabel = {
         let label = UILabel()
         label.text = ""
@@ -57,14 +60,16 @@ final class ChooseIngredientsViewController: UIViewController, DelegateViewContr
     var key: Int?
     var pizzas = ["Ветчина и сыр", "pizza1", "Маргарита", "pizza2"]
     var pizzaIngredients = PizzaIngredients()
-// MARK: - Lifecycle
+
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupUI()
     }
-// MARK: - Public methods
-    func setupUI() {
+
+    // MARK: - Private methods
+    private func setupUI() {
         guard let inx = key else { return }
         pizzaLabel.text = pizzas[inx]
         pizzaLabel.frame = CGRect(x: view.center.x - 100, y: 30, width: 200, height: 30)
@@ -84,7 +89,7 @@ final class ChooseIngredientsViewController: UIViewController, DelegateViewContr
         view.addSubview(infoButton)
     }
 
-    func createLabel(title: String, coordinateY: Int) -> UILabel {
+    private func createLabel(title: String, coordinateY: Int) -> UILabel {
         let label = UILabel()
         label.text = title
         label.font = label.font.withSize(23)
@@ -92,24 +97,18 @@ final class ChooseIngredientsViewController: UIViewController, DelegateViewContr
         return label
     }
 
-    func createSwitch(coordinateY: Int) -> UISwitch {
+    private func createSwitch(coordinateY: Int) -> UISwitch {
         let swich = UISwitch(frame: CGRect(x: Int(view.bounds.width) - 100, y: coordinateY, width: 40, height: 30))
         return swich
     }
 
-    func checkSwitch() {
+    private func checkSwitch() {
         pizzaIngredients.mozzarella = mozzarellaSwitch.isOn
         pizzaIngredients.ham = hamSwitch.isOn
         pizzaIngredients.mushrooms = mushroomsSwitch.isOn
         pizzaIngredients.olives = oliveSwitch.isOn
     }
 
-    func goToRootViewController() {
-        self.dismiss(animated: true)
-        if let navController = presentingViewController as? UINavigationController {
-            navController.popToRootViewController(animated: true)
-        }
-    }
 // MARK: - Actions
     @objc private func nextScreenAction(_ sender: UIButton) {
         checkSwitch()
@@ -128,5 +127,16 @@ final class ChooseIngredientsViewController: UIViewController, DelegateViewContr
         infoViewController.modalPresentationStyle = .formSheet
         infoViewController.key = key
         present(infoViewController, animated: true)
+    }
+}
+
+// MARK: - DelegateViewController
+extension ChooseIngredientsViewController: DelegateViewController {
+
+    func goToRootViewController() {
+        self.dismiss(animated: true)
+        if let navController = presentingViewController as? UINavigationController {
+            navController.popToRootViewController(animated: true)
+        }
     }
 }
