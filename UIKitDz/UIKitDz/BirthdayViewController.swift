@@ -9,7 +9,7 @@ import UIKit
 /// Controller of users
 class BirthdayViewController: UIViewController {
 
-    private lazy var image: UIImageView = {
+    private lazy var personImageView: UIImageView = {
         let image = UIImageView(image: UIImage(systemName: "person.circle.fill"))
         image.frame = CGRect(x: 10, y: 120, width: 60, height: 60)
         image.tintColor = .systemGray3
@@ -17,7 +17,7 @@ class BirthdayViewController: UIViewController {
         return image
     }()
 
-    private lazy var imageTwo: UIImageView = {
+    private lazy var personTwoImageView: UIImageView = {
         let image = UIImageView(image: UIImage(systemName: "person.circle.fill"))
         image.frame = CGRect(x: 10, y: 200, width: 60, height: 60)
         image.tintColor = .systemGray3
@@ -25,7 +25,7 @@ class BirthdayViewController: UIViewController {
         return image
     }()
 
-    private lazy var imageThree: UIImageView = {
+    private lazy var personThreeImageView: UIImageView = {
         let image = UIImageView(image: UIImage(systemName: "person.circle.fill"))
         image.frame = CGRect(x: 10, y: 280, width: 60, height: 60)
         image.tintColor = .systemGray3
@@ -33,7 +33,7 @@ class BirthdayViewController: UIViewController {
         return image
     }()
 
-    private lazy var line: UIView = {
+    private lazy var lineView: UIView = {
         let line = UIView()
         line.backgroundColor = .systemGray5
         line.frame = CGRect(x: 10, y: 190, width: UIScreen.main.bounds.width - 20, height: 1)
@@ -41,7 +41,7 @@ class BirthdayViewController: UIViewController {
         return line
     }()
 
-    private lazy var lineTwo: UIView = {
+    private lazy var lineTwoView: UIView = {
         let line = UIView()
         line.backgroundColor = .systemGray5
         line.frame = CGRect(x: 10, y: 270, width: UIScreen.main.bounds.width - 20, height: 1)
@@ -49,7 +49,7 @@ class BirthdayViewController: UIViewController {
         return line
     }()
 
-    private lazy var lineThree: UIView = {
+    private lazy var lineThreeView: UIView = {
         let line = UIView()
         line.backgroundColor = .systemGray5
         line.frame = CGRect(x: 10, y: 350, width: UIScreen.main.bounds.width - 20, height: 1)
@@ -57,7 +57,7 @@ class BirthdayViewController: UIViewController {
         return line
     }()
 
-    private lazy var jeremy: UILabel = {
+    private lazy var jeremyLabel: UILabel = {
         let label = UILabel()
         label.text = "Jeremy"
         label.textAlignment = .left
@@ -67,7 +67,7 @@ class BirthdayViewController: UIViewController {
         return label
     }()
 
-    private lazy var maria: UILabel = {
+    private lazy var mariaLabel: UILabel = {
         let label = UILabel()
         label.text = "Maria Lui"
         label.textAlignment = .left
@@ -77,7 +77,7 @@ class BirthdayViewController: UIViewController {
         return label
     }()
 
-    private lazy var jony: UILabel = {
+    private lazy var jonyLabel: UILabel = {
         let label = UILabel()
         label.text = "Jony Stark"
         label.textAlignment = .left
@@ -87,7 +87,7 @@ class BirthdayViewController: UIViewController {
         return label
     }()
 
-    private lazy var timeFooter: UILabel = {
+    private lazy var timeFooterLabel: UILabel = {
         let label = UILabel()
         label.text = "10 марта, в среду исполнится 25"
         label.textColor = .systemGray2
@@ -98,7 +98,7 @@ class BirthdayViewController: UIViewController {
         return label
     }()
 
-    private lazy var timeFooterTwo: UILabel = {
+    private lazy var timeFooterTwoLabel: UILabel = {
         let label = UILabel()
         label.text = "30 марта, в четверг исполнится 20"
         label.textColor = .systemGray2
@@ -109,7 +109,7 @@ class BirthdayViewController: UIViewController {
         return label
     }()
 
-    private lazy var timeFooterThree: UILabel = {
+    private lazy var timeFooterThreeLabel: UILabel = {
         let label = UILabel()
         label.text = "20 апреля, в субботу исполнится 25"
         label.textColor = .systemGray2
@@ -120,7 +120,7 @@ class BirthdayViewController: UIViewController {
         return label
     }()
 
-    private lazy var dateLabl: UILabel = {
+    private lazy var dateLabel: UILabel = {
         let label = UILabel()
         label.text = "18 дней"
         label.textColor = .systemGray2
@@ -131,7 +131,7 @@ class BirthdayViewController: UIViewController {
         return label
     }()
 
-    private lazy var dateLablTwo: UILabel = {
+    private lazy var dateTwoLabel: UILabel = {
         let label = UILabel()
         label.text = "28 дней"
         label.textColor = .systemGray2
@@ -142,7 +142,7 @@ class BirthdayViewController: UIViewController {
         return label
     }()
 
-    private lazy var dateLablThree: UILabel = {
+    private lazy var dateThreeLabel: UILabel = {
         let label = UILabel()
         label.text = "53 дня"
         label.textColor = .systemGray2
@@ -155,31 +155,35 @@ class BirthdayViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNavigationController()
         setupUI()
     }
 
-    func setupUI() {
+    func configureNavigationController() {
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.backgroundColor = .systemGray6
         navigationItem.title = "Birthday"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
                                                             target: self, action:
                                                                 #selector(rightButtonAction(sender:)))
-        view.addSubview(image)
-        view.addSubview(imageTwo)
-        view.addSubview(imageThree)
-        view.addSubview(line)
-        view.addSubview(lineTwo)
-        view.addSubview(lineThree)
-        view.addSubview(jeremy)
-        view.addSubview(maria)
-        view.addSubview(jony)
-        view.addSubview(timeFooter)
-        view.addSubview(timeFooterTwo)
-        view.addSubview(timeFooterThree)
-        view.addSubview(dateLabl)
-        view.addSubview(dateLablTwo)
-        view.addSubview(dateLablThree)
+    }
+
+    func setupUI() {
+        view.addSubview(personImageView)
+        view.addSubview(personTwoImageView)
+        view.addSubview(personThreeImageView)
+        view.addSubview(lineView)
+        view.addSubview(lineTwoView)
+        view.addSubview(lineThreeView)
+        view.addSubview(jeremyLabel)
+        view.addSubview(mariaLabel)
+        view.addSubview(jonyLabel)
+        view.addSubview(timeFooterLabel)
+        view.addSubview(timeFooterTwoLabel)
+        view.addSubview(timeFooterThreeLabel)
+        view.addSubview(dateLabel)
+        view.addSubview(dateTwoLabel)
+        view.addSubview(dateThreeLabel)
     }
     @objc func rightButtonAction(sender: UIBarButtonItem) {
         let profileVC = ProfileViewController()

@@ -28,7 +28,7 @@ final class ProfileViewController: UIViewController {
         return picker
     }()
 
-    private lazy var cancel: UIButton = {
+    private lazy var cancelButton: UIButton = {
         let button = UIButton()
         button.setTitle("Отмена", for: .normal)
         button.setTitleColor( .systemBlue, for: .normal)
@@ -38,7 +38,7 @@ final class ProfileViewController: UIViewController {
         return button
     }()
 
-    private lazy var add: UIButton = {
+    private lazy var addButton: UIButton = {
         let button = UIButton()
         button.setTitle("Добавить", for: .normal)
         button.setTitleColor( .systemBlue, for: .normal)
@@ -47,7 +47,7 @@ final class ProfileViewController: UIViewController {
         return button
     }()
 
-    private lazy var image: UIImageView = {
+    private lazy var avaImageView: UIImageView = {
         let image = UIImageView(image: UIImage(systemName: "person.circle.fill"))
         image.frame = CGRect(x: UIScreen.main.bounds.width / 4 + 20, y: 100, width: 150, height: 150)
         image.tintColor = .systemGray2
@@ -55,7 +55,7 @@ final class ProfileViewController: UIViewController {
         return image
     }()
 
-    private lazy var changePhoto: UILabel = {
+    private lazy var changePhotoLabel: UILabel = {
         let label = UILabel()
         label.text = "Изменить фото"
         label.textColor = .systemBlue
@@ -66,7 +66,7 @@ final class ProfileViewController: UIViewController {
         return label
     }()
 
-    private lazy var name: UILabel = {
+    private lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.text = "Имя"
         label.textColor = .systemBlue
@@ -88,7 +88,7 @@ final class ProfileViewController: UIViewController {
         return textfield
     }()
 
-    private lazy var lineOne: UIView = {
+    private lazy var lineOneView: UIView = {
         let line = UIView()
         line.backgroundColor = .systemGray5
         line.frame = CGRect(x: 20, y: 350, width: UIScreen.main.bounds.width - 80, height: 1)
@@ -96,7 +96,7 @@ final class ProfileViewController: UIViewController {
         return line
     }()
 
-    private lazy var dateTime: UILabel = {
+    private lazy var dateTimeLabel: UILabel = {
         let label = UILabel()
         label.text = "Дата"
         label.textColor = .systemBlue
@@ -120,7 +120,7 @@ final class ProfileViewController: UIViewController {
         return textfield
     }()
 
-    private lazy var lineTwo: UIView = {
+    private lazy var lineTwoView: UIView = {
         let line = UIView()
         line.backgroundColor = .systemGray5
         line.frame = CGRect(x: 20, y: 430, width: UIScreen.main.bounds.width - 80, height: 1)
@@ -128,7 +128,7 @@ final class ProfileViewController: UIViewController {
         return line
     }()
 
-    private lazy var age: UILabel = {
+    private lazy var ageLabel: UILabel = {
         let label = UILabel()
         label.text = "Возраст"
         label.textColor = .systemBlue
@@ -151,7 +151,7 @@ final class ProfileViewController: UIViewController {
         return textfield
     }()
 
-    private lazy var lineThree: UIView = {
+    private lazy var lineThreeView: UIView = {
         let line = UIView()
         line.backgroundColor = .systemGray5
         line.frame = CGRect(x: 20, y: 510, width: UIScreen.main.bounds.width - 80, height: 1)
@@ -159,7 +159,7 @@ final class ProfileViewController: UIViewController {
         return line
     }()
 
-    private lazy var gender: UILabel = {
+    private lazy var genderLabel: UILabel = {
         let label = UILabel()
         label.text = "Пол"
         label.textColor = .systemBlue
@@ -182,7 +182,7 @@ final class ProfileViewController: UIViewController {
         return textfield
     }()
 
-    private lazy var lineFour: UIView = {
+    private lazy var lineFourView: UIView = {
         let line = UIView()
         line.backgroundColor = .systemGray5
         line.frame = CGRect(x: 20, y: 590, width: UIScreen.main.bounds.width - 80, height: 1)
@@ -190,7 +190,7 @@ final class ProfileViewController: UIViewController {
         return line
     }()
 
-    private lazy var instagram: UILabel = {
+    private lazy var instagramLabel: UILabel = {
         let label = UILabel()
         label.text = "Instagram"
         label.textColor = .systemBlue
@@ -213,7 +213,7 @@ final class ProfileViewController: UIViewController {
         return textfield
     }()
 
-    private lazy var lineFive: UIView = {
+    private lazy var lineFiveView: UIView = {
         let line = UIView()
         line.backgroundColor = .systemGray5
         line.frame = CGRect(x: 20, y: 670, width: UIScreen.main.bounds.width - 80, height: 1)
@@ -235,30 +235,31 @@ final class ProfileViewController: UIViewController {
         setupUI()
     }
 }
+// MARK: - setupUI
 extension ProfileViewController {
     func setupUI() {
         view.backgroundColor = .white
-        view.addSubview(cancel)
-        view.addSubview(add)
-        view.addSubview(image)
-        view.addSubview(changePhoto)
-        view.addSubview(name)
+        view.addSubview(cancelButton)
+        view.addSubview(addButton)
+        view.addSubview(avaImageView)
+        view.addSubview(changePhotoLabel)
+        view.addSubview(nameLabel)
         view.addSubview(textfieldName)
-        view.addSubview(lineOne)
-        view.addSubview(dateTime)
+        view.addSubview(lineOneView)
+        view.addSubview(dateTimeLabel)
         view.addSubview(textfieldDate)
-        view.addSubview(lineTwo)
-        view.addSubview(age)
+        view.addSubview(lineTwoView)
+        view.addSubview(ageLabel)
         view.addSubview(textfieldAge)
-        view.addSubview(lineThree)
-        view.addSubview(gender)
+        view.addSubview(lineThreeView)
+        view.addSubview(genderLabel)
         view.addSubview(textfieldGender)
-        view.addSubview(lineFour)
-        view.addSubview(instagram)
+        view.addSubview(lineFourView)
+        view.addSubview(instagramLabel)
         view.addSubview(textfieldInstagram)
-        view.addSubview(lineFive)
+        view.addSubview(lineFiveView)
     }
-
+// MARK: - Action
     @objc func tappedAction(_ sender: Any) {
         let textfieldAlertController = UIAlertController(title: "Введите username Instagram", message: nil,
                                                          preferredStyle: .alert)
@@ -270,7 +271,7 @@ extension ProfileViewController {
         }
         textfieldAlertController.addAction(cancelAlertAction)
         textfieldAlertController.addAction(okAlertAction)
-        self.present(textfieldAlertController, animated: true)
+        present(textfieldAlertController, animated: true)
     }
 
     @objc func toolbarDoneAction() {
@@ -284,7 +285,7 @@ extension ProfileViewController {
         dismiss(animated: true)
     }
 }
-
+// MARK: - UIPickerViewDataSource
 extension ProfileViewController: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -300,7 +301,7 @@ extension ProfileViewController: UIPickerViewDataSource {
         }
     }
 }
-
+// MARK: - UIPickerViewDelegate
 extension ProfileViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch pickerView.tag {
