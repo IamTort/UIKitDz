@@ -10,10 +10,7 @@ import Foundation
 struct ConvertString {
      var originalString = ""
      var convertedString: String {
-         if originalString == "leohl" {
+         guard originalString == "leohl" else { return originalString }
              return "hello"
-         } else {
-             return originalString
-         }
      }
  }

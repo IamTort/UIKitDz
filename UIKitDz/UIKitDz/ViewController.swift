@@ -7,7 +7,7 @@
 
 import UIKit
 /// ViewController with play
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
     private lazy var begin: UIButton = {
         let button = UIButton()
@@ -53,6 +53,6 @@ class ViewController: UIViewController {
         }
         textfieldAlertController.addAction(cancelAlertAction)
         textfieldAlertController.addAction(okAlertAction)
-        self.present(textfieldAlertController, animated: true)
+        present(textfieldAlertController, animated: true)
     }
 }
