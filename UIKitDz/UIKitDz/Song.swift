@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 /// Model of Song
-class Song {
+final class Song {
     let name: String
     let singer: String
     let album: String

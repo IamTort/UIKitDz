@@ -8,13 +8,15 @@
 import UIKit
 import AVFoundation
 // Controller of player
-class PlayerViewController: UIViewController {
+final class PlayerViewController: UIViewController {
+// MARK: - IBOutlet
     @IBOutlet weak var playPauseButton: UIButton!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var albumLabel: UILabel!
     @IBOutlet weak var imagePic: UIImageView!
-    @IBOutlet weak var songName: UILabel!
-    @IBOutlet weak var singer: UILabel!
+    @IBOutlet weak var songNameLabel: UILabel!
+    @IBOutlet weak var singerLabel: UILabel!
+// MARK: - Public Properties
     var player = AVAudioPlayer()
     var songs = [Song( name: "Nothing", singer: "DYMD", album: "Nothing",
                        picture: "album1", song: "dymd_nothing"),
@@ -22,11 +24,15 @@ class PlayerViewController: UIViewController {
                         "Гори", picture: "album2", song: "monetochka-gori")]
     var song: Int?
     var isPlaying: Bool = true
-
+// MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        slider.addTarget(self, action: #selector(changeSlider), for: .valueChanged)
+        musicPlay()
+    }
+// MARK: - Public methods
+    func musicPlay() {
+        slider.addTarget(self, action: #selector(changeSliderAction), for: .valueChanged)
         playing()
         player.play()
     }
@@ -48,16 +54,16 @@ class PlayerViewController: UIViewController {
         guard let index = song else { return }
         albumLabel.text = songs[index].album
         imagePic.image = UIImage(named: songs[index].picture)
-        songName.text = songs[index].name
-        singer.text = songs[index].singer
+        songNameLabel.text = songs[index].name
+        singerLabel.text = songs[index].singer
     }
-
-    @objc func changeSlider(sender: UISlider) {
+// MARK: - Action
+    @objc func changeSliderAction(sender: UISlider) {
         if sender == slider {
             player.currentTime = TimeInterval(sender.value)
         }
     }
-
+// MARK: - IBAction
     @IBAction func playButtonAction(_ sender: Any) {
         if player.isPlaying {
             player.pause()

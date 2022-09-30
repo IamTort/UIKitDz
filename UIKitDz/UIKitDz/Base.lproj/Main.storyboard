@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Songs View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIKitDz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SongsViewController" customModule="UIKitDz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,7 +25,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain"/>
                                         <connections>
-                                            <action selector="segueOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ouD-G8-rZ0"/>
+                                            <action selector="showPlayerVCAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZyT-rU-KQg"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="album1" translatesAutoresizingMaskIntoConstraints="NO" id="rBC-bV-9RM">
@@ -81,7 +81,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain"/>
                                         <connections>
-                                            <action selector="segueTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n4P-Yu-bHA"/>
+                                            <action selector="showPlayerVCAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bsd-5b-pmX"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="album2" translatesAutoresizingMaskIntoConstraints="NO" id="PsZ-ZJ-2bm">
@@ -154,8 +154,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="firstSong" destination="YUq-Bz-5EI" id="TfY-hT-LqQ"/>
-                        <outlet property="songTwo" destination="lU9-53-eOy" id="Uen-T6-Nec"/>
+                        <outlet property="firstSongButton" destination="YUq-Bz-5EI" id="TfY-hT-LqQ"/>
+                        <outlet property="songTwoButton" destination="lU9-53-eOy" id="Uen-T6-Nec"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -345,9 +345,9 @@
                         <outlet property="albumLabel" destination="NOs-W8-aVx" id="ONL-6m-Qmb"/>
                         <outlet property="imagePic" destination="0VL-0N-sYG" id="BIk-hH-IEV"/>
                         <outlet property="playPauseButton" destination="yb3-TP-X6h" id="CY9-Pi-YHs"/>
-                        <outlet property="singer" destination="7NF-mb-ViE" id="3M6-0Y-tYf"/>
+                        <outlet property="singerLabel" destination="7NF-mb-ViE" id="3M6-0Y-tYf"/>
                         <outlet property="slider" destination="4oq-2p-NdT" id="BPh-LJ-X4p"/>
-                        <outlet property="songName" destination="s7P-aX-sKX" id="hqw-aD-I8n"/>
+                        <outlet property="songNameLabel" destination="s7P-aX-sKX" id="hqw-aD-I8n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="evX-p4-yb6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
