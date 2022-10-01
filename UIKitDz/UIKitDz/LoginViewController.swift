@@ -107,7 +107,7 @@ final class LoginViewController: UIViewController {
         setupUI()
     }
 
-    // MARK: - Public methods
+    // MARK: - Private methods
     private func setupUI() {
         view.addSubview(loginImageView)
         view.addSubview(nameLabel)
@@ -120,7 +120,7 @@ final class LoginViewController: UIViewController {
         view.addSubview(loginButton)
     }
 
-    // MARK: - Actions
+    // MARK: - Private Actions
     @objc private func tappedAction(_ sender: UIButton) {
         let foodVC = FoodViewController()
         let navController = UINavigationController(rootViewController: foodVC)

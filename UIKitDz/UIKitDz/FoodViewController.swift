@@ -45,7 +45,7 @@ final class FoodViewController: UIViewController {
         setupUI()
     }
 
-    // MARK: - Public methods
+    // MARK: - Private methods
     private func setupUI() {
         view.backgroundColor = .white
         navigationItem.leftBarButtonItem = UIBarButtonItem()
@@ -55,7 +55,7 @@ final class FoodViewController: UIViewController {
         view.addSubview(pizzaButton)
     }
 
-    // MARK: - Actions
+    // MARK: - Private Actions
     @objc private func pizzaButtonAction(_ sender: UIButton) {
         let pizzaVC = ChoosePizzaViewController()
         navigationController?.pushViewController(pizzaVC, animated: false)

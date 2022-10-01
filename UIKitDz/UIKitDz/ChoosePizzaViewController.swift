@@ -78,7 +78,7 @@ final class ChoosePizzaViewController: UIViewController {
         view.addSubview(addTwoButton)
     }
 
-    // MARK: - Actions
+    // MARK: - Private Actions
     @objc private func nextScreenAction(_ sender: UIButton) {
         let ingredientsVC = ChooseIngredientsViewController()
         ingredientsVC.modalPresentationStyle = .formSheet

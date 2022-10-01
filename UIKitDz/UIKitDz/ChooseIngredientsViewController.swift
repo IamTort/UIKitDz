@@ -8,7 +8,7 @@
 import UIKit
 
 /// Протокол добавления метода делегата
-protocol DelegateViewController: AnyObject {
+protocol PopToRootDelegate: AnyObject {
     func goToRootViewController()
 }
 
@@ -57,20 +57,23 @@ final class ChooseIngredientsViewController: UIViewController {
         return button
     }()
 
+    private var pizzas = ["Ветчина и сыр", "pizza1", "Маргарита", "pizza2"]
+    private var pizzaIngredients = PizzaIngredients()
+
+    // MARK: - Public properties
     var key: Int?
-    var pizzas = ["Ветчина и сыр", "pizza1", "Маргарита", "pizza2"]
-    var pizzaIngredients = PizzaIngredients()
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         setupUI()
     }
 
     // MARK: - Private methods
     private func setupUI() {
+        view.backgroundColor = .white
         guard let inx = key else { return }
+        guard inx < pizzas.count else { return }
         pizzaLabel.text = pizzas[inx]
         pizzaLabel.frame = CGRect(x: view.center.x - 100, y: 30, width: 200, height: 30)
         pizzaImageView = UIImageView(image: UIImage(named: pizzas[inx + 1]))
@@ -109,7 +112,7 @@ final class ChooseIngredientsViewController: UIViewController {
         pizzaIngredients.olives = oliveSwitch.isOn
     }
 
-// MARK: - Actions
+    // MARK: - Private Actions
     @objc private func nextScreenAction(_ sender: UIButton) {
         checkSwitch()
         let paymentVC = PaymentViewController()
@@ -130,11 +133,11 @@ final class ChooseIngredientsViewController: UIViewController {
     }
 }
 
-// MARK: - DelegateViewController
-extension ChooseIngredientsViewController: DelegateViewController {
+// MARK: - DelegateViewController + extension
+extension ChooseIngredientsViewController: PopToRootDelegate {
 
     func goToRootViewController() {
-        self.dismiss(animated: true)
+        dismiss(animated: true)
         if let navController = presentingViewController as? UINavigationController {
             navController.popToRootViewController(animated: true)
         }

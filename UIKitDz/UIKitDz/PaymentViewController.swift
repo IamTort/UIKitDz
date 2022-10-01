@@ -10,7 +10,7 @@ import UIKit
 /// Контроллер оплаты
 final class PaymentViewController: UIViewController {
 
-// MARK: - Private properties
+    // MARK: - Private properties
     private lazy var orderLabel: UILabel = {
         let label = UILabel()
         label.text = "Ваш заказ:"
@@ -53,22 +53,23 @@ final class PaymentViewController: UIViewController {
         return button
     }()
 
-    weak var delegate: DelegateViewController?
+    // MARK: - Public properties
+    weak var delegate: PopToRootDelegate?
     var orderIngredients: [String] = []
     var pizzaIngredients: PizzaIngredients?
     var pizzaName = ""
 
-// MARK: - Lifecycle
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupUI()
     }
 
-// MARK: - Private methods
+    // MARK: - Private methods
     private func setupUI() {
         navigationItem.title = "Оплата"
-        pizzaLabel.text = "1 \(pizzaName)\n" + (pizzaIngredients?.getPizzaIngredients())!
+        pizzaLabel.text = "1 \(pizzaName)\n\(pizzaIngredients?.getPizzaIngredients() ?? "")"
         view.addSubview(orderLabel)
         view.addSubview(payByCardLabel)
         view.addSubview(payByCashLabel)
@@ -95,32 +96,31 @@ final class PaymentViewController: UIViewController {
         return swich
     }
 
-    // MARK: - Actions
-    @objc func changeSwitchValueAction(_ sender: UISwitch) {
+    // MARK: - Private Actions
+    @objc private func changeSwitchValueAction(_ sender: UISwitch) {
         guard cashSwitch === sender else { cashSwitch.isOn.toggle()
-                                            return }
-            cardSwitch.isOn.toggle()
+            return }
+        cardSwitch.isOn.toggle()
     }
 
     @objc private func payAction(_ sender: UIButton) {
         let buttonAlertController = UIAlertController(title: "Заказ оплачен!",
-                message: "Ваш заказ доставят в течении 15 минут!\n Приятного аппетита", preferredStyle: .alert)
+            message: "Ваш заказ доставят в течении 15 минут!\n Приятного аппетита", preferredStyle: .alert)
         let okAlertAction = UIAlertAction(title: "ok", style: .default) {_ in
             self.dismiss(animated: true)
             self.delegate?.goToRootViewController()
         }
         buttonAlertController.addAction(okAlertAction)
-        self.present(buttonAlertController, animated: true)
+        present(buttonAlertController, animated: true)
     }
 
     @objc private func reviewAction(_ sender: UIButton) {
         let reviewAlertController = UIAlertController(title: "Привет!",
-                message: "Нам будет очень приятно, если вы оставите отзыв\n и поможете нам стать лучше",
-                preferredStyle: .alert)
+            message: "Нам будет очень приятно, если вы оставите отзыв\n и поможете нам стать лучше",
+                                                      preferredStyle: .alert)
         reviewAlertController.addTextField()
         let okAlertAction = UIAlertAction(title: "ok", style: .default) { _ in
-            guard let result = reviewAlertController.textFields?.first?.text else { return }
-            print(result)
+            guard (reviewAlertController.textFields?.first?.text) != nil else { return }
         }
         reviewAlertController.addAction(okAlertAction)
         present(reviewAlertController, animated: true)

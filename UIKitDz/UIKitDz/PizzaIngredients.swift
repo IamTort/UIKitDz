@@ -14,7 +14,7 @@ struct PizzaIngredients {
     var mushrooms = false
     var olives = false
 
-// MARK: - Public method
+    // MARK: - Public method
     func getPizzaIngredients() -> String {
         var number = 2
         var ingredients = ""

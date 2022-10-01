@@ -10,22 +10,23 @@ import UIKit
 /// Контроллер информации о пицце
 final class InfoViewController: UIViewController {
 
-// MARK: - Private properties
+    // MARK: - Private properties
     private lazy var descriptionLabel = createLabel(title: "Состав пиццы: ", coordinateY: 100)
     private lazy var pizzaLabel = createLabel(title: "cjcnfd", coordinateY: 160)
     private lazy var weightLabel = createLabel(title: "Масса:", coordinateY: 260)
     private lazy var massaLabel = createLabel(title: "cjcnfd", coordinateY: 320)
 
+    // MARK: - Public properties
     var key: Int?
 
-// MARK: - Lifecycle
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupUI()
     }
 
-// MARK: - Private methods
+    // MARK: - Private methods
     private func setupUI() {
         setStringInLabel()
         view.addSubview(descriptionLabel)
@@ -51,7 +52,7 @@ final class InfoViewController: UIViewController {
             pizzaLabel.text = "Увеличенная порция моцареллы, томаты, итальянские травы, фирменный томатный соус"
             massaLabel.text = "450 грамм"
         case 2:
-        pizzaLabel.text =
+            pizzaLabel.text =
             "Пастрами из индейки, острая чоризо, пикантная пепперони, бекон, моцарелла, фирменный томатный соус"
             massaLabel.text = "560 грамм"
         case .none:

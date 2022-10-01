@@ -76,8 +76,8 @@
 				FABADE3A28E48FEF008F8E5E /* ChoosePizzaViewController.swift */,
 				FABADE3C28E4C1BC008F8E5E /* ChooseIngredientsViewController.swift */,
 				FABADE3E28E4E213008F8E5E /* PaymentViewController.swift */,
-				FABADE4028E61384008F8E5E /* PizzaIngredients.swift */,
 				FABADE4228E64D06008F8E5E /* InfoViewController.swift */,
+				FABADE4028E61384008F8E5E /* PizzaIngredients.swift */,
 			);
 			path = UIKitDz;
 			sourceTree = "<group>";
