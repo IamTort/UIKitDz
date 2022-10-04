@@ -8,7 +8,7 @@
 import UIKit
 
 /// Контроллер для редактирования текста
-class ChangeTextViewController: UIViewController {
+final class ChangeTextViewController: UIViewController {
     // MARK: - Private enam
     private enum Constants {
         static let textForLabel = "Чтобы ввести текст, нажмите + и посмотрите, что произойдет"
@@ -90,6 +90,7 @@ class ChangeTextViewController: UIViewController {
         setupUI()
         delegateDatasourcePicker()
     }
+    
     // MARK: - Private metods
     private func delegateDatasourcePicker() {
         colorPicker.dataSource = self
