@@ -7,11 +7,11 @@
 
 import UIKit
 /// Контроллер таймера
-class TimerViewController: UIViewController {
+final class TimerViewController: UIViewController {
 
     // MARK: - IBOutlets
-    @IBOutlet weak var timePickerView: UIPickerView!
-    
+    @IBOutlet private weak var timePickerView: UIPickerView!
+
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,7 @@ class TimerViewController: UIViewController {
     }
 }
 
-// MARK: -  UIPickerViewDelegate + extension
+// MARK: - UIPickerViewDelegate + extension
 extension TimerViewController: UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 3
@@ -38,7 +38,7 @@ extension TimerViewController: UIPickerViewDelegate {
     }
 }
 
-// MARK: -  UIPickerViewDataSource + extension
+// MARK: - UIPickerViewDataSource + extension
 extension TimerViewController: UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return "\(row)"
