@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
 
     // MARK: - Private Properties
     private lazy var mainLabel: UILabel = {
@@ -42,7 +42,7 @@ class LoginViewController: UIViewController {
         return label
     }()
 
-    private lazy var textfieldOne: UITextField = {
+    private lazy var emailTextfield: UITextField = {
         let textfield = UITextField()
         textfield.placeholder = "Введите email"
         textfield.textAlignment = .left
@@ -71,9 +71,9 @@ class LoginViewController: UIViewController {
         return label
     }()
 
-    private lazy var textfieldTwo: UITextField = {
+    private lazy var passwordTextField: UITextField = {
         let textfield = UITextField()
-        textfield.placeholder = "Введите email"
+        textfield.placeholder = "Введите password"
         textfield.textAlignment = .left
         textfield.frame = CGRect(x: 40, y: 450, width: 200, height: 20)
         textfield.font = UIFont(name: "Futura", size: 16)
@@ -100,7 +100,7 @@ class LoginViewController: UIViewController {
         return label
     }()
 
-    private lazy var switcSwitch: UISwitch = {
+    private lazy var faceIdSwitch: UISwitch = {
         let switcher = UISwitch()
         switcher.isOn = true
         switcher.frame = CGRect(x: 265, y: 543, width: 20, height: 20)
@@ -131,13 +131,13 @@ class LoginViewController: UIViewController {
         view.addSubview(mainLabel)
         view.addSubview(signLabel)
         view.addSubview(emailLabel)
-        view.addSubview(textfieldOne)
+        view.addSubview(emailTextfield)
         view.addSubview(lineView)
         view.addSubview(passwordLabel)
-        view.addSubview(textfieldTwo)
+        view.addSubview(passwordTextField)
         view.addSubview(lineTwoLabel)
         view.addSubview(enterLabel)
-        view.addSubview(switcSwitch)
+        view.addSubview(faceIdSwitch)
         view.addSubview(loginButton)
     }
 

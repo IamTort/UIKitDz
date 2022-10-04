@@ -12,11 +12,11 @@ protocol InfoDelegate: AnyObject {
 }
 
 /// Контроллер выбора кроссовок
-class BootsViewController: UIViewController {
+final class BootsViewController: UIViewController {
 
-    // MARK: - Private property
+    // MARK: - Private Visual Components
     private lazy var segmentControl: UISegmentedControl = {
-        let segmentedControl = UISegmentedControl(items: menuArray)
+        let segmentedControl = UISegmentedControl(items: menu)
         segmentedControl.sizeToFit()
         segmentedControl.selectedSegmentIndex = 0
         segmentedControl.frame = CGRect(x: 180, y: 500, width: 200, height: 30)
@@ -57,7 +57,7 @@ class BootsViewController: UIViewController {
         return button
     }()
 
-    private lazy var textfieldSize: UITextField = {
+    private lazy var sizeTextField: UITextField = {
         let textfield = UITextField()
         textfield.placeholder = "pазмер"
         textfield.textAlignment = .right
@@ -68,7 +68,7 @@ class BootsViewController: UIViewController {
         return textfield
     }()
 
-    private lazy var textfieldCount: UITextField = {
+    private lazy var countTextField: UITextField = {
         let textfield = UITextField()
         textfield.placeholder = "количество"
         textfield.textAlignment = .right
@@ -79,17 +79,18 @@ class BootsViewController: UIViewController {
         return textfield
     }()
 
+    // MARK: - Private property
     private var sizePicker = UIPickerView()
 
-    private var menuArray = ["blue", "red", "purple"]
-    private let imageArray = [UIImage(named: "GazelleBlue"),
+    private var menu = ["blue", "red", "purple"]
+    private let image = [UIImage(named: "GazelleBlue"),
                       UIImage(named: "GazelleRed"),
                       UIImage(named: "GazellePurple")]
-    private let modelArray = ["Gazelle Blue", "Gazelle Red", "Gazelle Purple"]
+    private let bootsModels = ["Gazelle Blue", "Gazelle Red", "Gazelle Purple"]
     private let sizes = [36, 37, 38, 39, 40, 41, 42, 43]
 
     // MARK: - Public property
-    var delegate: InfoDelegate?
+    weak var delegate: InfoDelegate?
 
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -112,8 +113,8 @@ class BootsViewController: UIViewController {
         view.addSubview(countLabel)
         view.addSubview(priceLabel)
         view.addSubview(priceFullLabel)
-        view.addSubview(textfieldSize)
-        view.addSubview(textfieldCount)
+        view.addSubview(sizeTextField)
+        view.addSubview(countTextField)
         view.addSubview(nextScreenButton)
         moneyLabel.frame = CGRect(x: 270, y: 700, width: 100, height: 30)
         moneyLabel.textAlignment = .right
@@ -131,7 +132,7 @@ class BootsViewController: UIViewController {
 
     // MARK: - Private Actions
     @objc private func changePriceAction(_ sender: UITextField) {
-        guard let text = textfieldCount.text else { return }
+        guard let text = countTextField.text else { return }
         guard let count = Int(text) else { return }
         fullPriceLabel.text = "\(8500 * count) рублей"
     }
@@ -139,12 +140,12 @@ class BootsViewController: UIViewController {
     @objc private func selectedValueAction(target: UISegmentedControl) {
         guard target == segmentControl else { return }
         let segmentIndex = target.selectedSegmentIndex
-        bootsImageView.image = imageArray[segmentIndex]
-        modelLabel.text = modelArray[segmentIndex]
+        bootsImageView.image = image[segmentIndex]
+        modelLabel.text = bootsModels[segmentIndex]
     }
 
     @objc private func nextScreenAction(_ sender: UIButton) {
-        if fullPriceLabel.text == "" || textfieldSize.hasText == false {
+        if fullPriceLabel.text == "" || sizeTextField.hasText == false {
             let alertC = UIAlertController(
                 title: "Проверьте, что вы заполнили поля размера и количествa", message: nil, preferredStyle: .alert)
             let okAlertAction = UIAlertAction(title: "ok", style: .default)
@@ -155,8 +156,8 @@ class BootsViewController: UIViewController {
             delegate = paymentVC
             guard let model = modelLabel.text,
                   let image = bootsImageView.image,
-                  let size = textfieldSize.text,
-                  let count = textfieldCount.text,
+                  let size = sizeTextField.text,
+                  let count = countTextField.text,
                   let price = fullPriceLabel.text else { return }
             delegate?.transmitInfo(model: model, image: image, size: size, count: count, price: price)
             navigationController?.pushViewController(paymentVC, animated: false)
@@ -177,7 +178,7 @@ extension BootsViewController: UIPickerViewDataSource {
 // MARK: - UIPickerViewDelegate
 extension BootsViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        textfieldSize.text = String(sizes[row])
+        sizeTextField.text = String(sizes[row])
         return "\(sizes[row])"
     }
 }

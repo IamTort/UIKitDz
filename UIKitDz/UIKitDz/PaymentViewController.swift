@@ -7,9 +7,9 @@
 
 import UIKit
 /// Контролер оплаты
-class PaymentViewController: UIViewController {
+final class PaymentViewController: UIViewController {
 
-    // MARK: - Private property
+    // MARK: - Private Visual Components
     private lazy var pageLabel: UILabel = {
         let label = UILabel()
         label.text = "Корзина"
