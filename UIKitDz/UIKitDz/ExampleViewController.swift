@@ -7,7 +7,7 @@
 
 import UIKit
 /// Контроллер с примерами кнопки поделиться
-class ViewController: UIViewController {
+final class ExampleViewController: UIViewController {
 
     enum Components {
         static let plusPic = "plus"
@@ -20,15 +20,15 @@ class ViewController: UIViewController {
     }
 
     // MARK: - IBOutlets
-    @IBOutlet weak var wheelPickerView: UIPickerView!
-    @IBOutlet weak var picImageView: UIImageView!
-    @IBOutlet weak var chooseSegmetedControl: UISegmentedControl!
+    @IBOutlet private weak var wheelPickerView: UIPickerView!
+    @IBOutlet private weak var picImageView: UIImageView!
+    @IBOutlet private weak var chooseSegmetedControl: UISegmentedControl!
 
     // MARK: - Public properties
-    var buttonShare = UIButton()
-    var textField = UITextField()
-    var activityViewController: UIActivityViewController?
-    var numbers = [0, 1, 2, 3, 4]
+    private var buttonShare = UIButton()
+    private var textField = UITextField()
+    private var activityViewController: UIActivityViewController?
+    private var numbers = [0, 1, 2, 3, 4]
 
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -64,19 +64,7 @@ class ViewController: UIViewController {
         view.addSubview(buttonShare)
     }
 
-    // MARK: - Public Actions
-    @IBAction func choosePictureAction(_ sender: UISegmentedControl) {
-        switch chooseSegmetedControl.selectedSegmentIndex {
-        case 0:
-            picImageView.image = UIImage(systemName: Components.plusPic)
-        case 1:
-            picImageView.image = UIImage(systemName: Components.minusPic)
-        default:
-            break
-        }
-    }
-
-    @objc func handleShareAction(paramSender: Any) {
+    @objc private func handleShareAction(paramSender: Any) {
         let text = textField.text
         // MARK: - Private properties
         if text?.count == 0 {
@@ -87,19 +75,31 @@ class ViewController: UIViewController {
             present(alertViewController, animated: true)
         }
         activityViewController = UIActivityViewController(activityItems:
-                                    [textField.text ?? "nil"], applicationActivities: nil)
+                                                            [textField.text ?? "nil"], applicationActivities: nil)
         present(activityViewController!, animated: true)
     }
 
-    @IBAction func shareLinkAction(_ sender: Any) {
+    // MARK: - Private IBActions
+    @IBAction private func choosePictureAction(_ sender: UISegmentedControl) {
+        switch chooseSegmetedControl.selectedSegmentIndex {
+        case 0:
+            picImageView.image = UIImage(systemName: Components.plusPic)
+        case 1:
+            picImageView.image = UIImage(systemName: Components.minusPic)
+        default:
+            break
+        }
+    }
+
+    @IBAction private func shareLinkAction(_ sender: Any) {
         activityViewController = UIActivityViewController(activityItems:
                                                             [Components.link], applicationActivities: nil)
         present(activityViewController!, animated: true)
     }
 
-    @IBAction func shareDateAction(_ sender: Any) {
-        guard let image = picImageView.image else { return }
-        guard let text = textField.text else { return }
+    @IBAction private func shareDateAction(_ sender: Any) {
+        guard let image = picImageView.image,
+              let text = textField.text else { return }
         activityViewController = UIActivityViewController(activityItems:
                                                             [image, text], applicationActivities: nil)
         present(activityViewController!, animated: true)
@@ -107,7 +107,7 @@ class ViewController: UIViewController {
 }
 
 // MARK: - UITextFieldDelegate + extension
-extension ViewController: UITextFieldDelegate {
+extension ExampleViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -115,14 +115,14 @@ extension ViewController: UITextFieldDelegate {
 }
 
 // MARK: - UIPickerViewDelegate + extension
-extension ViewController: UIPickerViewDelegate {
+extension ExampleViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return "\(row)"
     }
 }
 
 // MARK: - UIPickerViewDataSource + extension
-extension ViewController: UIPickerViewDataSource {
+extension ExampleViewController: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         1
     }
