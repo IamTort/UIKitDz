@@ -6,31 +6,44 @@
 //
 
 import UIKit
+/// Контроллер входа
+final class LoginViewController: UIViewController {
 
-class LoginViewController: UIViewController {
-
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextfield: UITextField!
-
-    let defaults = UserDefaults.standard
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        defaults.set(1, forKey: "password")
-        defaults.set(11, forKey: "email")
+    enum Constants {
+        static let identifier = "appVC"
+        static let passwordKey = "password"
+        static let emailKey = "email"
     }
 
+    // MARK: - Private IBOutlets
+    @IBOutlet private weak var emailTextField: UITextField!
+    @IBOutlet private weak var passwordTextfield: UITextField!
+
+    // MARK: - LifeCycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+    // MARK: - Public method
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if identifier == "appVC" {
+        if identifier == Constants.identifier {
             guard let emailUser = emailTextField.text,
                   let passwordUser = passwordTextfield.text,
-                  emailUser == String(defaults.integer(forKey: "email")),
-                  passwordUser == String(defaults.integer(forKey: "password")) else { return false }
+                  emailUser == UserDefaults.standard.string(forKey: "email"),
+                  passwordUser == UserDefaults.standard.string(forKey: "password")
+            else {
+                let alertVC = UIAlertController(title: "Такого пользователя не существует!",
+                    message: "Введите правильный логин и пароль", preferredStyle: .alert)
+                let okAlertAction = UIAlertAction(title: "ok", style: .default)
+                alertVC.addAction(okAlertAction)
+                present(alertVC, animated: true)
+                return false }
             return true
         }
         return true
     }
 
+    // MARK: - Private IBAction
     @IBAction func nextScreenAction(_ sender: Any) {
     }
 }
