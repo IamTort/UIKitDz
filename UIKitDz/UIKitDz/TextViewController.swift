@@ -105,10 +105,10 @@ final class TextViewController: UIViewController {
 
     // MARK: - Private property
     private var myCurrentFont = ""
-    private var colors = [UIColor.blue, UIColor.green, UIColor.red, UIColor.black]
-    private var fonts = ["Futura", "Helvetica Neue", "Hoefler Text Italic", "Times New Roman"]
-    private var fontsPicker = UIPickerView()
-    var activityViewController: UIActivityViewController?
+    private let colors = [UIColor.blue, UIColor.green, UIColor.red, UIColor.black]
+    private let fonts = ["Futura", "Helvetica Neue", "Hoefler Text Italic", "Times New Roman"]
+    private let fontsPicker = UIPickerView()
+    private var activityViewController: UIActivityViewController?
 
     // MARK: - LifeCycle
     override func viewDidLoad() {
