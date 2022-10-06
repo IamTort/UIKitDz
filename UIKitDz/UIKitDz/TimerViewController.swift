@@ -7,7 +7,7 @@
 
 import UIKit
 /// Контроллер таймера
-class TimerViewController: UIViewController {
+final class TimerViewController: UIViewController {
 
     // MARK: - Constants
     enum Constants {
