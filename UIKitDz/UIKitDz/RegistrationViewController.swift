@@ -21,11 +21,11 @@ final class RegistrationViewController: UIViewController {
     }
 
     // MARK: - Private IBOutlets
-    @IBOutlet weak var emailTextfield: UITextField!
-    @IBOutlet weak var familyTextfield: UITextField!
-    @IBOutlet weak var nameTextfield: UITextField!
-    @IBOutlet weak var passwordTextfield: UITextField!
-    @IBOutlet weak var repeatPasswordTextfield: UITextField!
+    @IBOutlet private weak var emailTextfield: UITextField!
+    @IBOutlet private weak var familyTextfield: UITextField!
+    @IBOutlet private weak var nameTextfield: UITextField!
+    @IBOutlet private weak var passwordTextfield: UITextField!
+    @IBOutlet private weak var repeatPasswordTextfield: UITextField!
 
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -50,11 +50,11 @@ final class RegistrationViewController: UIViewController {
 
     private func observerKeyboard() {
         NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification,
-                                               object: nil, queue: nil) { (_) in
+                                               object: nil, queue: nil) { _ in
             self.view.frame.origin.y = -100
         }
         NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification,
-                                               object: nil, queue: nil) { (_) in
+                                               object: nil, queue: nil) { _ in
             self.view.frame.origin.y = 0.0
         }
     }

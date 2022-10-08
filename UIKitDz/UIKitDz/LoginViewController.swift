@@ -42,8 +42,4 @@ final class LoginViewController: UIViewController {
         }
         return true
     }
-
-    // MARK: - Private IBAction
-    @IBAction func nextScreenAction(_ sender: Any) {
-    }
 }

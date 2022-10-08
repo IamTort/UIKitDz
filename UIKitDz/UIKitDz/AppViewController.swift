@@ -10,13 +10,13 @@ import UIKit
 final class AppViewController: UIViewController {
 
     // MARK: - Private Visual Components
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var sizeSlider: UISlider!
-    @IBOutlet weak var catImageView: UIImageView!
-    @IBOutlet weak var changeImageSwitch: UISwitch!
-    @IBOutlet weak var genderSegmentedControl: UISegmentedControl!
-    @IBOutlet weak var nameTextfield: UITextField!
-    @IBOutlet weak var colorPickerView: UIPickerView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var sizeSlider: UISlider!
+    @IBOutlet private weak var catImageView: UIImageView!
+    @IBOutlet private weak var changeImageSwitch: UISwitch!
+    @IBOutlet private weak var genderSegmentedControl: UISegmentedControl!
+    @IBOutlet private weak var nameTextfield: UITextField!
+    @IBOutlet private weak var colorPickerView: UIPickerView!
 
     // MARK: - Private properties
     private let colorsOfCat = ["черный", "белый", "бело-рыже-черный", "серый", "коричневый", "рыжий"]
@@ -44,7 +44,7 @@ final class AppViewController: UIViewController {
 
     // MARK: - Private Actions
     @objc private func changeTextSizeAction(_ sender: UISlider) {
-        titleLabel.font = UIFont.systemFont(ofSize: CGFloat(sizeSlider.value * 1.0))
+        titleLabel.font = UIFont.systemFont(ofSize: CGFloat(sizeSlider.value))
     }
 
     @objc private func changeImageAction(_ sender: UISwitch) {
