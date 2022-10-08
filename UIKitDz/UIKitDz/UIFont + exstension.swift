@@ -1,5 +1,5 @@
 //
-//  Extensions.swift
+//  UIFont + exstension.swift
 //  UIKitDz
 //
 //  Created by angelina on 06.10.2022.

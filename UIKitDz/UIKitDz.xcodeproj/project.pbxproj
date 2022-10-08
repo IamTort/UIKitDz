@@ -14,7 +14,7 @@
 		FABADE1928DDCD05008F8E5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABADE1828DDCD05008F8E5E /* Assets.xcassets */; };
 		FABADE1C28DDCD05008F8E5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABADE1A28DDCD05008F8E5E /* LaunchScreen.storyboard */; };
 		FAD8414C28EF694C00B32CFB /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD8414B28EF694C00B32CFB /* TextViewController.swift */; };
-		FAD8414E28EF724700B32CFB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD8414D28EF724700B32CFB /* Extensions.swift */; };
+		FAD8414E28EF724700B32CFB /* UIFont + exstension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD8414D28EF724700B32CFB /* UIFont + exstension.swift */; };
 		FAD8415028EF768500B32CFB /* DarkOrLightMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD8414F28EF768500B32CFB /* DarkOrLightMode.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,7 @@
 		FABADE1B28DDCD05008F8E5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FABADE1D28DDCD05008F8E5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAD8414B28EF694C00B32CFB /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
-		FAD8414D28EF724700B32CFB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FAD8414D28EF724700B32CFB /* UIFont + exstension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + exstension.swift"; sourceTree = "<group>"; };
 		FAD8414F28EF768500B32CFB /* DarkOrLightMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkOrLightMode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,7 +70,7 @@
 				FABADE1A28DDCD05008F8E5E /* LaunchScreen.storyboard */,
 				FABADE1D28DDCD05008F8E5E /* Info.plist */,
 				FAD8414B28EF694C00B32CFB /* TextViewController.swift */,
-				FAD8414D28EF724700B32CFB /* Extensions.swift */,
+				FAD8414D28EF724700B32CFB /* UIFont + exstension.swift */,
 				FAD8414F28EF768500B32CFB /* DarkOrLightMode.swift */,
 			);
 			path = UIKitDz;
@@ -169,7 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAD8414E28EF724700B32CFB /* Extensions.swift in Sources */,
+				FAD8414E28EF724700B32CFB /* UIFont + exstension.swift in Sources */,
 				FABADE1428DDCD04008F8E5E /* ViewController.swift in Sources */,
 				FABADE1028DDCD04008F8E5E /* AppDelegate.swift in Sources */,
 				FABADE1228DDCD04008F8E5E /* SceneDelegate.swift in Sources */,
