@@ -13,6 +13,12 @@
 		FABADE1728DDCD04008F8E5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABADE1528DDCD04008F8E5E /* Main.storyboard */; };
 		FABADE1928DDCD05008F8E5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABADE1828DDCD05008F8E5E /* Assets.xcassets */; };
 		FABADE1C28DDCD05008F8E5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABADE1A28DDCD05008F8E5E /* LaunchScreen.storyboard */; };
+		FAC6819928FB408500D3346D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6819828FB408500D3346D /* SecondViewController.swift */; };
+		FAC6819B28FB445900D3346D /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6819A28FB445900D3346D /* ThirdViewController.swift */; };
+		FAC6819D28FC30B100D3346D /* StoryboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6819C28FC30B100D3346D /* StoryboardViewController.swift */; };
+		FAC6819F28FC343D00D3346D /* NSLayoutConstraintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6819E28FC343D00D3346D /* NSLayoutConstraintViewController.swift */; };
+		FAC681A128FC548A00D3346D /* NSLayoutAnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC681A028FC548A00D3346D /* NSLayoutAnchorViewController.swift */; };
+		FAC681A328FC5F4400D3346D /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC681A228FC5F4400D3346D /* StackViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		FABADE1828DDCD05008F8E5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FABADE1B28DDCD05008F8E5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FABADE1D28DDCD05008F8E5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAC6819828FB408500D3346D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		FAC6819A28FB445900D3346D /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		FAC6819C28FC30B100D3346D /* StoryboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardViewController.swift; sourceTree = "<group>"; };
+		FAC6819E28FC343D00D3346D /* NSLayoutConstraintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintViewController.swift; sourceTree = "<group>"; };
+		FAC681A028FC548A00D3346D /* NSLayoutAnchorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutAnchorViewController.swift; sourceTree = "<group>"; };
+		FAC681A228FC5F4400D3346D /* StackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +71,16 @@
 				FABADE0F28DDCD04008F8E5E /* AppDelegate.swift */,
 				FABADE1128DDCD04008F8E5E /* SceneDelegate.swift */,
 				FABADE1328DDCD04008F8E5E /* ViewController.swift */,
+				FAC6819828FB408500D3346D /* SecondViewController.swift */,
+				FAC6819A28FB445900D3346D /* ThirdViewController.swift */,
 				FABADE1528DDCD04008F8E5E /* Main.storyboard */,
 				FABADE1828DDCD05008F8E5E /* Assets.xcassets */,
 				FABADE1A28DDCD05008F8E5E /* LaunchScreen.storyboard */,
 				FABADE1D28DDCD05008F8E5E /* Info.plist */,
+				FAC6819C28FC30B100D3346D /* StoryboardViewController.swift */,
+				FAC6819E28FC343D00D3346D /* NSLayoutConstraintViewController.swift */,
+				FAC681A028FC548A00D3346D /* NSLayoutAnchorViewController.swift */,
+				FAC681A228FC5F4400D3346D /* StackViewController.swift */,
 			);
 			path = UIKitDz;
 			sourceTree = "<group>";
@@ -160,8 +178,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC6819928FB408500D3346D /* SecondViewController.swift in Sources */,
+				FAC6819D28FC30B100D3346D /* StoryboardViewController.swift in Sources */,
+				FAC6819F28FC343D00D3346D /* NSLayoutConstraintViewController.swift in Sources */,
 				FABADE1428DDCD04008F8E5E /* ViewController.swift in Sources */,
+				FAC6819B28FB445900D3346D /* ThirdViewController.swift in Sources */,
 				FABADE1028DDCD04008F8E5E /* AppDelegate.swift in Sources */,
+				FAC681A328FC5F4400D3346D /* StackViewController.swift in Sources */,
+				FAC681A128FC548A00D3346D /* NSLayoutAnchorViewController.swift in Sources */,
 				FABADE1228DDCD04008F8E5E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
