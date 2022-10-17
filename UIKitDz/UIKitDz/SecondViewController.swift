@@ -11,14 +11,14 @@ import UIKit
 final class SecondViewController: UIViewController {
 
     // MARK: - Private Visual Components
-    private let viewRed: UIView = {
+    private let redView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .red
         return view
     }()
     
-    private let viewBlue: UIView = {
+    private let blueView: UIView = {
        let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .cyan
@@ -33,10 +33,10 @@ final class SecondViewController: UIViewController {
     
     // MARK: - Private methods
     private func setupUI() {
-        view.addSubview(viewRed)
-        view.addSubview(viewBlue)
+        view.addSubview(redView)
+        view.addSubview(blueView)
         
-        let viewVFL = ["viewRed": viewRed, "viewBlue": viewBlue]
+        let viewVFL = ["viewRed": redView, "viewBlue": blueView]
         let metrics = ["height": 100, "width": view.bounds.size.width / 3, "top": view.bounds.size.height / 2]
         
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-top-[viewRed(height)]|",
